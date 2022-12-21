@@ -1,0 +1,133 @@
+{
+    "API": "V0.7",
+    "move-to":
+    {
+        "com-uuid": "97a23419-6c96-4dfe-8661-9690a7dd7d2f",
+        "command": "start-task",
+        "execution-unit": "python123",
+        "sender": "commander",
+        "task": {
+            "name": "move-to",
+            "params": {
+                "speed": "standard",
+                "waypoint": {
+                    "altitude": 40.0,
+                    "latitude": 57.7611363,
+                    "longitude": 16.6805011,
+                    "rostype": "GeoPoint"
+                }
+            }
+        },
+        "task-uuid": "0c7abf9b-dce4-46fb-9c51-67f86a74ae30"
+    }
+    ,
+    "Ping": {
+        "com-uuid": "97a23419-6c96-4dfe-8661-9690a7dd7d2f",
+        "command": "ping",
+        "sender": "commander"
+    }
+    ,
+    "signal-task": {
+        "com-uuid": "97a23419-6c96-4dfe-8661-9690a7dd7d2f",
+        "command": "signal-task",
+        "signal": "$pause",
+        "sender": "commander",
+        "task-uuid": "0c7abf9b-dce4-46fb-9c51-67f86a74ae30"
+    }
+    ,
+
+
+    "move-path": 
+    {
+        "com-uuid": "0bac359a-7b77-467b-95f9-bbaed320aadd",
+        "command": "start-task",
+        "execution-unit": "dji0",
+        "sender": "commander",
+        "task": {
+            "name": "move-path",
+            "params": {
+                "speed": "standard",
+                "waypoints": [
+                    {
+                        "altitude": 40.0,
+                        "latitude": 57.7611363,
+                        "longitude": 16.6805011,
+                        "rostype": "GeoPoint"
+                    },
+                    {
+                        "altitude": 50.0,
+                        "latitude": 57.7615541,
+                        "longitude": 16.6798574,
+                        "rostype": "GeoPoint"
+                    },
+                    {
+                        "altitude": 30.0,
+                        "latitude": 57.7615255,
+                        "longitude": 16.6784841,
+                        "rostype": "GeoPoint"
+                    },
+                    {
+                        "altitude": 70.0,
+                        "latitude": 57.7609703,
+                        "longitude": 16.6780335,
+                        "rostype": "GeoPoint"
+                    },
+                    {
+                        "altitude": 80.0,
+                        "latitude": 57.760398,
+                        "longitude": 16.6787201,
+                        "rostype": "GeoPoint"
+                    },
+                    {
+                        "altitude": 0.0,
+                        "latitude": 57.7604781,
+                        "longitude": 16.6799003,
+                        "rostype": "GeoPoint"
+                    }
+                ]
+            }
+        },
+        "task-uuid": "15c42e27-6c43-4291-bf10-d55334148e35"
+    }
+    
+}
+    
+    {
+    "com-uuid": "0bac359a-7b77-467b-95f9-bbaed320aadd",
+    "command": "start-task",
+    "execution-unit": "dji0",
+    "sender": "commander",
+    "task": {
+        "name": "move-path",
+        "params": {
+            "speed": "standard",
+            "waypoints": [
+                {
+                    "altitude": 40,
+                    "latitude": 58.408486163213645,
+                    "longitude": 15.592647164343735,
+                    "rostype": "GeoPoint"
+                },
+                {
+                    "altitude": 40,
+                    "latitude": 58.410674467108265,
+                    "longitude": 15.639504552165803,
+                    "rostype": "GeoPoint"
+                },
+                {
+                    "altitude": 40,
+                    "latitude": 58.40620653589725,
+                    "longitude": 15.666958666880513,
+                    "rostype": "GeoPoint"
+                },
+                {
+                    "altitude": 40,
+                    "latitude": 58.391381154162296,
+                    "longitude": 15.562600261536982,
+                    "rostype": "GeoPoint"
+                }
+            ]
+        }
+    },
+    "task-uuid": "15c42e27-6c43-4291-bf10-d55334148e35"
+    }
