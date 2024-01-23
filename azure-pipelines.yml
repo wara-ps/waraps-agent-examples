@@ -1,0 +1,38 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  name: 'Default'
+
+steps:
+    - script: |
+        git clone $(azurewithPAT)
+
+        cd ./waraps-agent-examples
+
+        echo "*****Git removing remote origin*****"
+        git remote rm origin
+
+        echo "*****Removed history, due to sensitive data*****"
+        rm -rf .git
+
+        git init
+
+        git config user.email $(github_mail)
+        git config user.name $(github_username)
+
+        git add .
+        git commit -m "New mirror push"
+
+
+        echo "*****Git remote add*****"
+        echo "$(githubwithPAT)"
+        git remote add origin $(githubwithPAT)
+
+        git push -u --force origin master
+      displayName: 'Azure -> Github'

@@ -1,0 +1,18 @@
+position_node:
+  ros__parameters:
+    lon: 2.0
+    lat: 1.0
+    alt: 2.0
+  
+mqtt_publish_node:
+  ros__parameters:
+    rate: 3.0
+    host: 'broker.waraps.org'
+    port: 8883
+    tls: True
+    username: ''
+    password: ''
+    base_topic: 'waraps/unit/ground/simulation/'
+    agent_name: 'ros2_simulated_sensor_agent'
+    agent_type: 'ground'
+    levels: ["sensor"]
