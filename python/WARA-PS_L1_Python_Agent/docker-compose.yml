@@ -1,0 +1,19 @@
+version: "3"
+services:
+  python_agent:
+    build: .
+    volumes:
+      - ./data:/app/data
+      - ./:/app
+    env_file:
+      - .env
+    command:
+      #ARGUMENTS FOR "bulk_create.py":
+      #-u, --units : Number of units to create
+      #-n, --name : Set the base name for the Agents
+      #EXAMPLE: "python -u bulk_create.py -u 10 -n python_test_unit"
+      "python -u bulk_create.py -u 1 -n l1_drone" # Will create 10 agents named python_test_unit_1 .. python_test_unit_10
+
+      #"python -u ./main.py" #Used to start the main program (and starts one agent)
+
+    container_name: python_L1_agent

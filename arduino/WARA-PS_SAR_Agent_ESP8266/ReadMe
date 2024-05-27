@@ -1,0 +1,2 @@
+Instructions to setup the agent are found at the top of the WARA-PS:SAR_Agent_ESP8266.ino file. 
+Note that you need the Aurdino IDE to write the code and that the secrets.h file must be edited by the downloader to gain internet access.

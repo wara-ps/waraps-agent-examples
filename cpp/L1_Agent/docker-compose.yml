@@ -1,0 +1,17 @@
+services:
+  cpp_agent:
+    # image: image_name:latest
+    build: .
+    volumes:
+      - .:/app
+    command: bash -c "g++ -fdiagnostics-color=always -g main.cpp -o main -mavx2 -Wall -Wextra -Wpedantic -O3 -lpaho-mqtt3as -lpaho-mqttpp3 && ./main -u 1 --name cpp_l1_agent"
+    container_name: cpp_l1_agent
+    env_file:
+      - .env
+    extra_hosts: # These three work on my Ubuntu computer
+      - "dockerhost:host-gateway" # Access host's localhost from container
+#    networks:
+#      - services
+#networks:
+#  services:
+#    external: true

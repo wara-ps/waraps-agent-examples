@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  talker:
+    image: ros2_agent:latest
+    command: bash -c 'source install/setup.bash && ros2 launch simulated_agent_l1_bringup simulated_agent_l1_launch.py'
+    container_name: ros2_simulated_sagent
+    networks:
+      - frontend
+      - services
+
+networks:
+  services:
+    external: true
+  frontend:
+    external: true

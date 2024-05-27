@@ -1,0 +1,46 @@
+#AGENT
+AGENT_NAME="test_drone"
+AGENT_TYPE="drone" #drone/human/boat
+HIDDEN="FALSE"
+RANDOM_START_POSITION="FALSE" #If TRUE, position is still based on start_lon and start_lat, but with slight deviation
+START_LAT='57.7614'
+START_LON='16.6874'
+#LAT, LON is an alternative to START_LAT, START_LON. WORKS THE SAME WAY! is used if start_lat, start_lon is not used. (in docker run with genesis its not used)
+LAT='57.7614'
+LON='16.6874'
+UPDATE_RATE="5"          # Herts(hz) Updates per second
+
+# BROKER
+WARAPS_BROKER="localhost"
+WARAPS_PORT='1883'
+WARAPS_TLS_CONNECTION='FALSE'
+WARAPS_USERNAME=''
+WARAPS_PASSWORD=''
+
+# GAZEBO
+ENABLE_GAZEBO='FALSE'
+ENABLE_GAZEBO_CAMERA='FALSE'
+GAZEBO_USERNAME=''
+GAZEBO_PASSWORD=''
+GAZEBO_BROKER='gazebo2.waraps.org'
+GAZEBO_PORT='1883'
+GAZEBO_TLS_CONNECTION='FALSE'
+BASE_VIDEOSERVER_URL="wss://ome.waraps.org:3334/app"
+# Sets location for gazebo-world
+GAZEBO_LOCATION='granso' #granso / motala / petterstedt / terra
+
+# AI DETECTION
+ENABLE_AI='FALSE' #USES SAME BROKER AS THE AGENT ITSELF
+
+# TEAM LEADER
+ENABLE_TEAM_LEADER='FALSE'
+RESOURCE_POOL=''
+
+# OBJECT DETECTION ALWAYS ON
+ENABLE_OBJECT_DETECTION='FALSE'
+
+# # OBJECT DETECTION ON ON SEARCH AREA
+# ENABLE_SA_OBJECT_DETECTION = 'FALSE'
+
+# MANAGE TIME COMMANDS
+ENABLE_TIME_HANDLER='FALSE'
